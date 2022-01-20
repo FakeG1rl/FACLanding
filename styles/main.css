@@ -1,0 +1,225 @@
+@import "../fonts/fonts.css";
+
+body {
+  width: 100%;
+  background-color: #292929;
+  background-image: url('../sourses/pattern.png');
+  overflow-x: hidden;
+
+  color: #F1F1F1;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 2vw;
+
+  margin: 0 180px 0 0;
+  position: relative;
+}
+
+h1 {
+  font-family: 'RoadRage';
+  font-size: 4vw;
+  margin: 0 auto 74px;
+}
+
+h1, p, .but, .but span{
+  display: inline-block;
+}
+
+/* p {
+  line-height: 46.88px
+
+} */
+
+.header {
+  background-image: url('../sourses/header.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  top: -240px;
+  left: 0;
+  width: 37.85vw;
+  height: 24vw;
+}
+
+.main {
+  width: 48vw;
+  margin: 238px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main p {
+  align-items: center;
+  margin-bottom: 87px;
+  text-align: center;
+}
+
+.but {
+  cursor: pointer;
+}
+
+.but:hover {
+  filter: drop-shadow(6px 6px 6px black);
+}
+
+.but span {
+  margin: 0 auto;
+  font-size: 1.5vw;
+  font-weight: 700;
+  padding: 25px 90px;
+  background-color: #F0A202;
+  border-radius: 18px;
+  color: #161616;
+}
+
+.second {
+  margin: 560px 0 0 39vw;
+  position: relative;
+  width: 38vw
+}
+
+.second p+p {
+  margin-top: 47px
+}
+
+.st{
+  background-image: url('../sourses/1st.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -478px;
+  left: -75vw;
+  width: 60vw;
+  height: 45vw;
+}
+
+.nd{
+  background-image: url('../sourses/2nd.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -478px;
+  right: -32vw;
+  width: 51vw;
+  height: 17vw;
+}
+
+.therd {
+  margin-top: 373px;
+  margin-left: 180px;
+  width: 32vw;
+  position: relative;
+}
+
+.pic{
+  background-image: url('../sourses/pic.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -204px;
+  right: -78vw;
+  width: 57vw;
+  height: 57vw;
+}
+
+.td{
+  background-image: url('../sourses/3rd.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -737px;
+  left: -23vw;
+  width: 64vw;
+  height: 28vw;
+}
+
+#fin {
+  width: 42vw;
+  margin: 924px auto 174px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#fin p {
+  text-align: center;
+  margin-bottom: 101px;
+}
+textarea {
+  padding: 25px  50px;
+  border: 5px solid #161616;
+  border-radius: 18px;
+  margin-right: 20px;
+  font-family: 'Roboto';
+  font-size: 26px;
+  line-height: 15px;
+  color: #161616;
+}
+textarea::placeholder {
+  color: #16161650
+}
+
+.form {
+  display: flex;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 17vw;
+  margin-left: -0;
+  align-items: flex-end;
+  padding: 0 40px 80px 80px;
+}
+
+.sosial {
+  display: flex;
+}
+
+.logo{
+  background-image: url('../sourses/logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 14vw;
+  height: 8vw;
+}
+
+.dis{
+  background-image: url('../sourses/dis.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 5vw;
+  height: 5vw;
+}
+
+.dis:hover {
+  filter: drop-shadow(6px 6px 6px black);
+}
+
+.tw{
+  background-image: url('../sourses/tw.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 1vw;
+  width: 5vw;
+  height: 5vw;
+}
+.tw:hover {
+  filter: drop-shadow(6px 6px 6px black);
+}
+
+
+.foo {
+  background-image: url('../sourses/footer.png');
+  width: 115vw;
+  height: 17vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: -10vw;
+  bottom: 0;
+  z-index: -1;
+  position: absolute;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fake Art Clicker</title>
+
+    <link rel="stylesheet" href="styles/reset.css"/>
+    <link rel="stylesheet" href="styles/main.css"/>
+  </head>
+  <body>
+    <div class="header"></div>
+    <div class="main">
+      <h1>Fake Art Clicker</h1>
+      <p>Инкрементная игра, в которой вы почувствуете
+        себя художником-фальсификатором! Копируйте
+        чужие работы, скупайте оригиналы и станьте
+        главным игроком на арт-рынке.</p>
+      <a href="#fin">
+        <div class="but">
+          <span>Записаться на бета-тест</span>
+        </div>
+      </a>
+    </div>
+    <div class="second">
+      <div class="st"></div>
+      <div class="nd"></div>
+      <p>Учитесь у именитых художников, улучшайте свою мастерскую, нанимате учеников и дилеров.</p>
+      <p>Зачем рисовать картины и продавать их самому, если за это за тебя могут сделать другие?</p>
+    </div>
+    <div class="therd">
+      <p>Копируйте самые знаменитые работы мастеров прошлого! Соберите всю коллекцию оригинальных работ и&nbspзарабатывайте миллионы (и&nbspдаже больше) в секунду!</p>
+      <div class="pic"></div>
+      <div class="td"></div>
+    </div>
+    <div id="fin">
+        <p>Подписывайся на обновления и&nbspне&nbspпропусти запуск бета-теста. Подписывайся на обновления FakeArtCliker и&nbspузнавай обо всех новостях первым!</p>
+      <div class="form">
+        <textarea id="e-mail" rows="1" cols="40" placeholder='e-mail'
+></textarea>
+        <divi id='sub' class="but" onclick="submit()">
+          <span>Подписаться</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="logo"></div>
+      <div class="sosial">
+        <a href="https://discord.gg/V8j3UXvH"><div class="dis"></div></a>
+        <a href="https://www.twitch.tv/fakeg1rl"><div class="tw"></div></a>
+      </div>
+    </div>
+    <div class="foo"></div>
+
+    <script type="text/javascript">
+        let but = document.getElementById('sub')
+        let textarea = document.getElementById('e-mail')
+        function submit() {
+          if (textarea.value === '') {
+            textarea.value = 'Введите e-mail'
+          } else {
+            console.log(textarea.value);
+          }
+        }
+    </script>
+  </body>
+</html>
