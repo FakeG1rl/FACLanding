@@ -2,9 +2,11 @@
 
 body {
   width: 100%;
+  overflow-x: hidden;
+
   background-color: #292929;
   background-image: url('../sourses/pattern.png');
-  overflow-x: hidden;
+  background-position: center;
 
   color: #F1F1F1;
   font-family: 'Roboto';
@@ -18,17 +20,16 @@ body {
 h1 {
   font-family: 'RoadRage';
   font-size: 4vw;
-  margin: 0 auto 74px;
+  margin: 0 auto 4vw;
 }
 
 h1, p, .but, .but span{
   display: inline-block;
 }
 
-/* p {
-  line-height: 46.88px
-
-} */
+p {
+  line-height: 2.4vw
+}
 
 .header {
   background-image: url('../sourses/header.png');
@@ -36,23 +37,49 @@ h1, p, .but, .but span{
   background-repeat: no-repeat;
 
   position: absolute;
-  top: -240px;
+  top: -12vw;
   left: 0;
   width: 37.85vw;
-  height: 24vw;
+  height: 18vw;
 }
 
 .main {
   width: 48vw;
-  margin: 238px auto 0;
+  margin: 12vw auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+
+.hand {
+  background-image: url('../sourses/hand.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 12vw;
+  height: 6vw;
+  position: absolute;
+}
+
+.hand:nth-child(1) {
+  transform: rotate(-71deg);
+  top: -12vw;
+  right: 3vw
+}
+.hand:nth-child(2) {
+  transform: rotate(-40deg);
+  top: -9vw;
+  right: -8vw
+}
+.hand:nth-child(3) {
+  transform: rotate(-20deg);
+  top: 0;
+  right: -12vw;
 }
 
 .main p {
   align-items: center;
-  margin-bottom: 87px;
+  margin-bottom: 5vw;
   text-align: center;
 }
 
@@ -68,14 +95,14 @@ h1, p, .but, .but span{
   margin: 0 auto;
   font-size: 1.5vw;
   font-weight: 700;
-  padding: 25px 90px;
+  padding: 1.3vw 4.6vw;
   background-color: #F0A202;
-  border-radius: 18px;
+  border-radius: 0.9vw;
   color: #161616;
 }
 
 .second {
-  margin: 560px 0 0 39vw;
+  margin: 29vw 0 0 47vw;
   position: relative;
   width: 38vw
 }
@@ -89,10 +116,10 @@ h1, p, .but, .but span{
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top: -478px;
-  left: -75vw;
+  top: -25vw;
+  left: -72vw;
   width: 60vw;
-  height: 45vw;
+  height: 40vw;
 }
 
 .nd{
@@ -100,14 +127,14 @@ h1, p, .but, .but span{
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top: -478px;
-  right: -32vw;
+  top: -25vw;
+  right: -38vw;
   width: 51vw;
-  height: 17vw;
+  height: 14vw;
 }
 
 .therd {
-  margin-top: 373px;
+  margin-top: 19vw;
   margin-left: 180px;
   width: 32vw;
   position: relative;
@@ -118,8 +145,8 @@ h1, p, .but, .but span{
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top: -204px;
-  right: -78vw;
+  top: -10vw;
+  right: -66vw;
   width: 57vw;
   height: 57vw;
 }
@@ -129,15 +156,14 @@ h1, p, .but, .but span{
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  bottom: -737px;
-  left: -23vw;
+  bottom: -36vw;
+  left: -30vw;
   width: 64vw;
-  height: 28vw;
+  height: 26vw;
 }
 
 #fin {
-  width: 42vw;
-  margin: 924px auto 174px;
+  margin: 48vw auto 9vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -145,20 +171,25 @@ h1, p, .but, .but span{
 
 #fin p {
   text-align: center;
-  margin-bottom: 101px;
+  width: 42vw;
+  margin-bottom: 5vw;
 }
-textarea {
-  padding: 25px  50px;
-  border: 5px solid #161616;
-  border-radius: 18px;
-  margin-right: 20px;
+.email input {
+  padding: 1.03vw  3vw;
+  border: 0.2VW solid #161616;
+  border-radius: 0.9vw;
+  margin-right: 1vw;
   font-family: 'Roboto';
-  font-size: 26px;
-  line-height: 15px;
+  font-size: 1.5vw;
+  line-height: 0.7vw;
+  width: 35vw;
   color: #161616;
 }
-textarea::placeholder {
+.email input::placeholder {
   color: #16161650
+}
+.send {
+  display: none
 }
 
 .form {
@@ -172,7 +203,7 @@ textarea::placeholder {
   height: 17vw;
   margin-left: -0;
   align-items: flex-end;
-  padding: 0 40px 80px 80px;
+  padding: 0 2vw 4vw 4vw;
 }
 
 .sosial {
@@ -214,11 +245,11 @@ textarea::placeholder {
 
 .foo {
   background-image: url('../sourses/footer.png');
-  width: 115vw;
+  width: 109vw;
   height: 17vw;
   background-size: cover;
   background-repeat: no-repeat;
-  left: -10vw;
+  left: -6vw;
   bottom: 0;
   z-index: -1;
   position: absolute;

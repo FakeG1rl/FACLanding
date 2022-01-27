@@ -6,10 +6,19 @@
 
     <link rel="stylesheet" href="styles/reset.css"/>
     <link rel="stylesheet" href="styles/main.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+      emailjs.init("user_fZ8mMYoO7LH4yVLdpvsMl");
+      })();
+    </script>
   </head>
   <body>
     <div class="header"></div>
     <div class="main">
+      <div class="hand"></div>
+      <div class="hand"></div>
+      <div class="hand"></div>
       <h1>Fake Art Clicker</h1>
       <p>Инкрементная игра, в которой вы почувствуете
         себя художником-фальсификатором! Копируйте
@@ -35,12 +44,16 @@
     </div>
     <div id="fin">
         <p>Подписывайся на обновления и&nbspне&nbspпропусти запуск бета-теста. Подписывайся на обновления FakeArtCliker и&nbspузнавай обо всех новостях первым!</p>
-      <div class="form">
-        <textarea id="e-mail" rows="1" cols="40" placeholder='e-mail'
-></textarea>
-        <divi id='sub' class="but" onclick="submit()">
-          <span>Подписаться</span>
-        </div>
+        <div class="form">
+          <form class="form" id = 'form'>
+   			    <p class="email">
+    			     <input id='email' type="text" name="email" value="" placeholder="e-mail" />
+            </p>
+  			       <input class="send" type="submit" />
+          </form>
+          <div id='sub' class="but" onclick="submit()">
+            <span>Подписаться</span>
+          </div>
       </div>
     </div>
     <div class="footer">
@@ -53,15 +66,45 @@
     <div class="foo"></div>
 
     <script type="text/javascript">
-        let but = document.getElementById('sub')
-        let textarea = document.getElementById('e-mail')
-        function submit() {
-          if (textarea.value === '') {
-            textarea.value = 'Введите e-mail'
-          } else {
-            console.log(textarea.value);
+
+          let but = document.getElementById('sub')
+          let form = document.getElementById('form')
+          let input = document.getElementById('email')
+          function submit() {
+            if (input.value === '') {
+              //err
+              input.value = 'Введите e-mail'
+            } else {
+              var templateParams = {
+                  email: input.value,
+              };
+
+              emailjs.send('service_l81md98', 'template_invdqu3', templateParams)
+                  .then(function(response) {
+                     console.log('SUCCESS!', response.status, response.text);
+                  }, function(error) {
+                     console.log('FAILED...', error);
+                  });
+              // let data  = {
+              //   service_id: '',
+              //   template_id: '',
+              //   user_id: 'user_fZ8mMYoO7LH4yVLdpvsMl',
+              //   template_params: {
+              //       'email': input.value
+              //   }
+              // $.ajax({
+              //     type: 'POST',
+              //     url: 'https://api.emailjs.com/api/v1.0/email/send'
+              //     data: JSON.stringify(data),
+              //     contentType: 'application/json'
+              // }).done(function() {
+              //     alert('Your mail is sent!');
+              // }).fail(function(error) {
+              //     alert('Oops... ' + JSON.stringify(error));
+              // });
+            }
           }
-        }
+
     </script>
   </body>
 </html>
