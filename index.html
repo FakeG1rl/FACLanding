@@ -2,6 +2,14 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <META NAME="keywords" CONTENT="FAC, fake, art, clicker, кликер, инкрементная игра, симулятор художника">
+    <meta property="og:image" content="sourses/share.jpg">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="526">
+
+    <link rel="icon" type="image/png" href="sourses/favicon.png"/>
+
     <title>Fake Art Clicker</title>
 
     <link rel="stylesheet" href="styles/reset.css"/>
@@ -66,7 +74,6 @@
     <div class="foo"></div>
 
     <script type="text/javascript">
-
           let but = document.getElementById('sub')
           let form = document.getElementById('form')
           let input = document.getElementById('email')
@@ -77,31 +84,13 @@
             } else {
               var templateParams = {
                   email: input.value,
-              };
-
-              emailjs.send('service_l81md98', 'template_invdqu3', templateParams)
-                  .then(function(response) {
-                     console.log('SUCCESS!', response.status, response.text);
-                  }, function(error) {
-                     console.log('FAILED...', error);
-                  });
-              // let data  = {
-              //   service_id: '',
-              //   template_id: '',
-              //   user_id: 'user_fZ8mMYoO7LH4yVLdpvsMl',
-              //   template_params: {
-              //       'email': input.value
-              //   }
-              // $.ajax({
-              //     type: 'POST',
-              //     url: 'https://api.emailjs.com/api/v1.0/email/send'
-              //     data: JSON.stringify(data),
-              //     contentType: 'application/json'
-              // }).done(function() {
-              //     alert('Your mail is sent!');
-              // }).fail(function(error) {
-              //     alert('Oops... ' + JSON.stringify(error));
-              // });
+            };
+            emailjs.send('service_l81md98', 'template_invdqu3', templateParams)
+                .then(function(response) {
+                   console.log('SUCCESS!', response.status, response.text);
+                }, function(error) {
+                   console.log('FAILED...', error);
+                });
             }
           }
 
